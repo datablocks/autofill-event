@@ -8,7 +8,7 @@
   var rootElement = window.document.documentElement,
     $rootElement = $(rootElement);
 
-  addGlobalEventListener('change', markValue);
+  // addGlobalEventListener('change', markValue);
   addValueChangeByJsListener(markValue);
 
   $.prototype.checkAndTriggerAutoFillEvent = jqCheckAndTriggerAutoFillEvent;
@@ -134,7 +134,7 @@
   function triggerChangeEvent(element) {
     var doc = window.document;
     var event = doc.createEvent("HTMLEvents");
-    event.initEvent("change", true, true);
+    event.initEvent("blur", true, true);
     element.dispatchEvent(event);
   }
 
